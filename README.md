@@ -4,7 +4,7 @@ SWG Combat Analysis is a log parsing tool for Star Wars Galaxies, built in parti
 
 ## Current Version
 
-The current version is Alpha Build V2.0. This is the second published version and supports 'offline' log analysis only. As an Alpha Build, it likely has numerous bugs and is not intended for public use. If you've come across it, you're welcome to try it, but please don't judge my unfinished hacking.
+The current version is Beta Build V1.0. This is the third published version and supports 'offline' log analysis, as well as a minimal, first version of 'realtime' log analysis where SWGCA can sit on top of the SWG window and show updates on the fly. As a Beta Build, it likely has undiscovered bugs and is not intended for widespread public use. If you've come across it, you're welcome to try it, but please don't judge my unfinished hacking.
 
 ## How To Use
 
@@ -23,6 +23,10 @@ You can also see the build version here and configure the following settings.
 Check the box to include NPCs in the sorted list of damage dealers, damage takers, and healers. For a long chat log, showing NPCs will tend to make the list *very* long, as it includes *all* NPCs that have created any log message within your configured combat log range, whether it related to your group's activity or not.
 
 __NOTE__: Detection of whether a character is an NPC or PC is *not* robust, as there is no definitive indication in the chat log one way or the other. Leaving the box unchecked will exclude many NPCs, especially those from common heroics, but not all. NPCs that have names that fit the player character creation guidelines (1 or 2 words, no reserved words) will be falsely detected as PCs. Future updates of the tool may hardcode more NPC names for correct detection.
+
+#### Keep SWGCA on top
+
+Check the box to make the SWGCA window stay on top of all other Windows applications, including SWG *if* SWG is running in Borderless Window mode. If SWG is in Fullscreen mode, it will not work. In SWG, start logging, and create a macro (looped or manual trigger) to type `/logchat` *twice* (toggle it off, then back on) to force a refresh of the log file, which will trigger an update of SWGCA.
 
 ### Damage Tab
 
@@ -80,7 +84,7 @@ All characters that appeared in at least 1 combat event in the session should ap
 
 ### Period
 
-This is disabled and will be added with future features.
+This is disabled and will be added with future features. It will allow you to see a realtime DPS leaderboard only for the most recent N seconds (whatever duration is selected in the Period dropdown).
 
 ### ^ Button
 
